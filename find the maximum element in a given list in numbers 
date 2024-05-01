@@ -1,0 +1,15 @@
+def find_max(numbers):
+    if len(numbers) == 0:
+        return None
+    else:
+        return max(numbers)
+
+# Taking a list of numbers as input
+numbers = list(map(int, input("Enter numbers separated by space: ").split()))
+
+# Finding the maximum element
+print("Maximum element:", find_max(numbers))
+Output:
+Enter numbers separated by space: 10 5 20 15
+Maximum element: 20
+
