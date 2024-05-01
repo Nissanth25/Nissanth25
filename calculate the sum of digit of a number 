@@ -1,0 +1,17 @@
+def sum_of_digits(number):
+    total = 0
+    while number > 0:
+        digit = number % 10
+        total += digit
+        number //= 10
+    return total
+
+# Taking a number as input
+number = int(input("Enter a number: "))
+
+# Calculating the sum of digits
+print("Sum of digits:", sum_of_digits(number))
+
+Output:
+Enter a number: 12345
+Sum of digits: 15
