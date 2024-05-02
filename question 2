@@ -1,0 +1,17 @@
+u=int(input('enter no1:'))
+i=int(input('enter no2:'))
+j=int(input('enter no3:'))
+if u==i and i==j:
+    print('numbers are not distinct')
+elif u<=i<=j:
+    print(u,i,j)
+elif u<=j<=i:
+    print(u,j,i)
+elif i<=u<=j:
+    print(i,u,j)
+elif i<=j<=u:
+    print(i,j,u)
+elif j<=u<=i:
+    print(j,u,i)
+elif j<=i<=u:
+    print(j,i,u)
