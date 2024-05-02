@@ -1,0 +1,7 @@
+print(max([2,4,6,8,10]))
+def max(u):
+    max=u[0]
+    for i in u:
+        if i>max:
+            max=i
+return max
