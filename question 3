@@ -1,0 +1,10 @@
+u=int(input('enter no1:'))
+i=int(input('enter no2:'))
+add=u+i
+sub=u-i
+multi=u*i
+div=u/i
+print('the sum of numbers is:',add)
+print('the difference of numbers is:',sub)
+print('the product of numbers is:',multi)
+print('the quotient of numbers is:',div)
