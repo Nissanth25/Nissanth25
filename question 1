@@ -1,0 +1,18 @@
+u=int(input('Enter no1:'))
+i=int(input('Enter no2:'))
+j=int(input('Enter no3:'))
+if u==i and i==j:
+    print('All numbers are equal')
+elif u==i and u>j:
+    print('Equal numbers are larger')
+elif u==j and u>i:
+    print('Equal numbers are larger')
+elif j==iand i>u:
+    print('Equal numbers are larger')
+else:
+    if u>i and u>j:
+        print('u is the largest number')
+    elif i>u and i>j:
+        print('i is the largest number')
+    else:
+        print('j is the largest number')
