@@ -1,0 +1,3 @@
+u=float(input('enter temperature in celsius:'))
+i=(u*9/5)+32
+print(f"{u}degree celsius is equal to {i} degree fahrenheit")
