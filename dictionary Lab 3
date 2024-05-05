@@ -1,0 +1,180 @@
+1. Create a Dictionary of Squares:
+
+print("Enter numbers separated by space:")
+numbers = list(map(int, input().split()))
+squares_dict = {num: num**2 for num in numbers}
+print("Dictionary of Squares:", squares_dict)
+
+**********************************************************
+
+2. Print Dictionary in Table Format:
+
+print("Enter dictionary (format: {'key1': value1, 'key2': value2, ...}):")
+dictionary = eval(input())
+for key, value in dictionary.items():
+    print(f'{key}: {value}')
+
+**********************************************************
+
+3. Find Second Largest Value in Dictionary:
+
+print("Enter dictionary (format: {'key1': value1, 'key2': value2, ...}):")
+dictionary = eval(input())
+second_largest = sorted(dictionary.values())[-2]
+print("Second Largest Value:", second_largest)
+
+**********************************************************
+
+4. Combine Dictionaries by Adding Values:
+
+print("Enter first dictionary (format: {'key1': value1, 'key2': value2, ...}):")
+dict1 = eval(input())
+print("Enter second dictionary (format: {'key1': value1, 'key2': value2, ...}):")
+dict2 = eval(input())
+combined_dict = {key: dict1.get(key, 0) + dict2.get(key, 0) for key in set(dict1) | set(dict2)}
+print("Combined Dictionary:", combined_dict)
+
+**********************************************************
+
+5. Convert Dictionary of Lists to List of Dictionaries:
+
+print("Enter dictionary (format: {'key1': [value1, value2, ...], 'key2': [value1, value2, ...], ...}):")
+dictionary = eval(input())
+list_of_dicts = [{key: value[i] for key, value in dictionary.items()} for i in range(len(next(iter(dictionary.values()))))]
+print("List of Dictionaries:", list_of_dicts)
+
+**********************************************************
+
+6. Create Dictionary from Two Lists:
+
+print("Enter keys separated by space:")
+keys = list(input().split())
+print("Enter values separated by space:")
+values = list(map(int, input().split()))
+dictionary = dict(zip(keys, values))
+print("Created Dictionary:", dictionary)
+
+**********************************************************
+
+7. Create Dictionary of Dictionaries:
+
+print("Enter outer dictionary (format: {'key1': {'inner_key1': inner_value1, 'inner_key2': inner_value2, ...}, ...}):")
+outer_dict = eval(input())
+print("Outer Dictionary:", outer_dict)
+
+**********************************************************
+
+8. Multiply Values in Dictionary:
+
+print("Enter dictionary (format: {'key1': value1, 'key2': value2, ...}):")
+dictionary = eval(input())
+result = 1
+for value in dictionary.values():
+    result *= value
+print("Result of Multiplication:", result)
+
+**********************************************************
+
+9. Sort Dictionary by Keys:
+
+print("Enter dictionary (format: {'key1': value1, 'key2': value2, ...}):")
+dictionary = eval(input())
+sorted_dict = {key: dictionary[key] for key in sorted(dictionary)}
+print("Sorted Dictionary:", sorted_dict)
+
+**********************************************************
+
+10. Update Dictionary Values for Specific Key:
+
+print("Enter dictionary (format: {'key1': value1, 'key2': value2, ...}):")
+dictionary = eval(input())
+key = input("Enter key to update: ")
+value = int(input("Enter new value: "))
+dictionary[key] = value
+print("Updated Dictionary:", dictionary)
+
+**********************************************************
+
+11. Count Votes for School Election:
+
+print("Enter votes dictionary (format: {'Candidate1': votes1, 'Candidate2': votes2, ...}):")
+votes = eval(input())
+print("Votes:", votes)
+
+**********************************************************
+
+12. Count Word Frequencies in Text:
+
+print("Enter text:")
+text = input()
+word_freq = {}
+for word in text.split():
+    word_freq[word] = word_freq.get(word, 0) + 1
+print("Word Frequencies:", word_freq)
+
+**********************************************************
+
+13. Translate Sentence using Dictionary:
+
+print("Enter translations dictionary (format: {'word1': 'translation1', 'word2': 'translation2', ...}):")
+translations = eval(input())
+sentence = input("Enter sentence: ")
+translated_sentence = ' '.join(translations.get(word, word) for word in sentence.split())
+print("Translated Sentence:", translated_sentence)
+
+**********************************************************
+
+14. Calculate Average Student Grades:
+
+print("Enter grades dictionary (format: {'Student1': [grade1, grade2, ...], 'Student2': [grade1, grade2, ...], ...}):")
+grades = eval(input())
+averages = {student: sum(grades) / len(grades) for student, grades in grades.items()}
+print("Average Grades:", averages)
+
+**********************************************************
+
+15. Recommend Movies based on User Preferences:
+
+print("Enter preferences dictionary (format: {'Genre1': ['Movie1', 'Movie2', ...], 'Genre2': ['Movie3', 'Movie4', ...], ...}):")
+preferences = eval(input())
+print("Recommendations:", preferences)
+
+**********************************************************
+
+16. Spell Checker using Dictionary of Valid Words:
+
+print("Enter list of valid words (format: ['word1', 'word2', ...]):")
+valid_words = eval(input())
+document = input("Enter document: ")
+misspelled = [word for word in document.split() if word not in valid_words]
+print("Misspelled Words:", misspelled)
+
+**********************************************************
+
+17. Calculate Total Expenses for each Category:
+
+print("Enter expenses dictionary (format: {'Category1': [expense1, expense2, ...], 'Category2': [expense1, expense2, ...], ...}):")
+expenses = eval(input())
+total_expenses = {category: sum(costs) for category, costs in expenses.items()}
+print("Total Expenses:", total_expenses)
+
+**********************************************************
+
+18. Check Room Availability for a Given Date:
+
+print("Enter room availability dictionary (format: {'RoomType1': {'date1': availability1, 'date2': availability2, ...}, 'RoomType2': {'date1': availability1, 'date2': availability2, ...}, ...}):")
+room_availability = eval(input())
+date = input("Enter date: ")
+availability = {room_type: availability.get(date, 0) for room_type, availability in room_availability.items()}
+print("Room Availability for", date, ":", availability)
+
+**********************************************************
+
+19. Print Distinct Values in Dictionary:
+
+print("Enter list of dictionaries (format: [{'key1': value1}, {'key2': value2}, ...]):")
+data = eval(input())
+unique_values = set(item for subdict in data for item in subdict.values())
+print("Unique Values:", unique_values)
+
+**********************************************************
