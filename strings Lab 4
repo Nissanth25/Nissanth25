@@ -1,0 +1,154 @@
+
+1. Anagram Checker:
+
+string1 = input("Enter the first string: ").lower()
+string2 = input("Enter the second string: ").lower()
+
+if sorted(string1) == sorted(string2):
+    print("True")
+else:
+    print("False")
+
+**********************************************************
+
+2. Character Count:
+
+string = input("Enter a string: ").lower()
+count = {}
+
+for char in string:
+    if char.isalpha():
+        if char in count:
+            count[char] += 1
+        else:
+            count[char] = 1
+
+for char, freq in count.items():
+    print(f"'{char}': {freq}")
+
+**********************************************************
+
+3. Reversed String:
+
+string = input("Enter a string: ")
+reversed_string = ""
+
+for char in string:
+    reversed_string = char + reversed_string
+
+print(reversed_string)
+
+**********************************************************
+
+4.Remove Duplicates:
+
+string = input("Enter a string: ")
+unique_chars = ""
+
+for char in string:
+    if char not in unique_chars:
+        unique_chars += char
+
+print(unique_chars)
+
+**********************************************************
+
+5. Longest Word:
+
+sentence = input("Enter a sentence: ")
+words = sentence.split()
+longest_word = max(words, key=len)
+print(longest_word)
+
+**********************************************************
+
+
+6. Word Frequency:
+
+from collections import Counter
+
+sentence = input("Enter a sentence: ")
+word_freq = Counter(sentence.lower().split())
+print(word_freq)
+
+**********************************************************
+
+7. Vowel Count:
+
+string = input("Enter a string: ")
+vowels = "aeiou"
+count = sum(1 for char in string.lower() if char in vowels)
+print(count)
+
+**********************************************************
+
+8. Rotation Check:
+
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+
+if len(str1) != len(str2):
+    print("False")
+else:
+    concatenated = str1 + str1
+    if concatenated.count(str2) > 0:
+        print("True")
+    else:
+        print("False")
+
+**********************************************************
+
+9. Pangram Check:
+
+string = input("Enter a sentence: ")
+
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+if all(letter in string.lower() for letter in alphabet):
+    print("True")
+else:
+    print("False")
+
+**********************************************************
+
+10. Palindrome Check:
+
+sentence = input("Enter a sentence: ")
+alphanumeric = ''.join(char.lower() for char in sentence if char.isalnum())
+if alphanumeric == alphanumeric[::-1]:
+    print("True")
+else:
+    print("False")
+
+**********************************************************
+
+Password Strength Checker:
+
+11. password = input("Enter a password: ")
+
+if len(password) < 6:
+    print("Weak")
+elif 6 <= len(password) <= 10:
+    print("Medium")
+else:
+    print("Strong")
+
+**********************************************************
+
+12. Email Generator:
+
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+
+email = f"{first_name.lower()}.{last_name.lower()}@example.com"
+print(email)
+
+**********************************************************
+
+13. Username Validation:username = input("Enter a username: ")
+
+if username.isalnum() and username[0].isalpha() and 6 <= len(username) <= 12:
+    print("Valid username")
+else:
+    print("Invalid username")
+
+**********************************************************
