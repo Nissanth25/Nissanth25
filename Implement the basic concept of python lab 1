@@ -1,0 +1,206 @@
+1. Write a Python program that takes three integers as input and prints the largest among them. However, if two or more integers are equal and larger than the third integer, print "Equal numbers are larger". If all three integers are equal, print "All numbers are equal".
+
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+num3 = int(input("Enter the third number: "))
+
+if num1 == num2 == num3:
+    print("All numbers are equal")
+elif num1 == num2 > num3 or num1 == num3 > num2 or num2 == num3 > num1:
+    print("Equal numbers are larger")
+else:
+    print("The largest number is:", max(num1, num2, num3))
+
+**********************************************************
+
+2. Write a Python program that takes three numbers as input and prints them in ascending order. However, if two or more numbers are equal, print "Numbers are not distinct.
+
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+num3 = int(input("Enter the third number: "))
+
+if num1 == num2 == num3:
+    print("Numbers are not distinct")
+else:
+    numbers = [num1, num2, num3]
+    numbers.sort()
+    print("The numbers in ascending order:", numbers)
+
+**********************************************************
+
+3. Write a Python program that takes two numbers as input and performs basic arithmetic operations (addition, subtraction, multiplication, division) on them.
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+print("Addition:", num1 + num2)
+print("Subtraction:", num1 - num2)
+print("Multiplication:", num1 * num2)
+if num2 != 0:
+    print("Division:", num1 / num2)
+else:
+    print("Division by zero is not allowed")
+
+**********************************************************
+
+4. Write a Python program that converts temperature from Celsius to Fahrenheit. The program should take Celsius temperature as input and print the equivalent temperature in Fahrenheit.
+
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print("Temperature in Fahrenheit:", fahrenheit)
+
+**********************************************************
+
+5. Write a Python program to check if a given number is even or odd
+
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("The number is even")
+else:
+    print("The number is odd")
+
+**********************************************************
+
+6. Write a Python program that calculates the sum of digits of a given number.
+
+num = int(input("Enter a number: "))
+sum_of_digits = 0
+while num > 0:
+    sum_of_digits += num % 10
+    num //= 10
+print("Sum of digits:", sum_of_digits)
+
+**********************************************************
+
+7. Write a Python program to calculate the factorial of a given number
+
+num = int(input("Enter a number: "))
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+print("Factorial of", num, "is", factorial)
+
+**********************************************************
+
+8. Write a Python program that finds the maximum element in a given list of numbers.
+
+numbers = [int(x) for x in input("Enter numbers separated by space: ").split()]
+print("Maximum element:", max(numbers))
+
+**********************************************************
+
+9. Write a Python program to calculate the simple interest. The program should take principal amount, rate of interest, and time as input and print the simple interest.
+
+principal = float(input("Enter the principal amount: "))
+rate = float(input("Enter the rate of interest: "))
+time = float(input("Enter the time period (in years): "))
+simple_interest = (principal * rate * time) / 100
+print("Simple interest:", simple_interest)
+
+**********************************************************
+
+10. Write a Python program to generate the Fibonacci series up to n terms, where n is provided by the user.
+
+n = int(input("Enter the number of terms: "))
+fibonacci = [0, 1]
+for i in range(2, n):
+    fibonacci.append(fibonacci[-1] + fibonacci[-2])
+print("Fibonacci series up to", n, "terms:", fibonacci)
+
+**********************************************************
+
+11. Write a Python program to check if a given number is prime or not.
+
+num = int(input("Enter a number: "))
+if num > 1:
+    for i in range(2, int(num/2) + 1):
+        if (num % i) == 0:
+            print(num, "is not a prime number")
+            break
+    else:
+        print(num, "is a prime number")
+else:
+    print(num, "is not a prime number")
+
+**********************************************************
+
+12. Write a Python program to count the occurrences of each word in a given string
+
+string = input("Enter a string: ")
+word_count = {}
+for word in string.split():
+    word_count[word] = word_count.get(word, 0) + 1
+print("Occurrences of each word:", word_count)
+
+**********************************************************
+
+13. Write a Python program to check if two strings are anagrams of each other
+
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+if sorted(str1) == sorted(str2):
+    print("The strings are anagrams")
+else:
+    print("The strings are not anagrams")
+
+**********************************************************
+
+14. Write a Python function to reverse a given string.
+
+string = input("Enter a string: ")
+print("Reversed string:", string[::-1])
+
+**********************************************************
+
+15. Write a Python function to count the number of vowels in a given string.
+
+string = input("Enter a string: ")
+vowels = "aeiouAEIOU"
+count = 0
+for char in string:
+    if char in vowels:
+        count += 1
+print("Number of vowels:", count)
+
+**********************************************************
+
+16. Write a Python program that takes two strings as input from the user and concatenates them together. Display the concatenated string as output.
+
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+concatenated_string = str1 + str2
+print("Concatenated string:", concatenated_string)
+
+**********************************************************
+
+17. Write a Python program that takes a string as input from the user and prints its length.
+
+string = input("Enter a string: ")
+print("Length of the string:", len(string))
+
+**********************************************************
+
+18. Write a Python program that takes a string as input from the user and converts it to uppercase and lowercase. Display both the uppercase and lowercase versions of the string.
+
+string = input("Enter a string: ")
+print("Uppercase:", string.upper())
+print("Lowercase:", string.lower())
+
+**********************************************************
+
+19. Write a Python program that takes a string as input from the user and extracts a substring from it. Display the extracted substring.
+
+string = input("Enter a string: ")
+start = int(input("Enter the start index: "))
+end = int(input("Enter the end index: "))
+print("Extracted substring:", string[start:end])
+
+**********************************************************
+
+20. Write a Python program that takes a sentence as input from the user and counts the number of words in it. Display the count of words.
+
+sentence = input("Enter a sentence: ")
+word_count = len(sentence.split())
+print("Number of words in the sentence:", word_count)
+
+**********************************************************
