@@ -1,0 +1,299 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPpmbLeSzWkxH+CYdCJn8Vi",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Nissanth25/Nissanth25/blob/main/training%20and%20placement\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Develop a Python program that checks whether a given number is even or odd. Prompt the user to input a number, and then display a message indicating whether the number is even or odd."
+      ],
+      "metadata": {
+        "id": "z-bwLxzxsSNo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input(\"Enter a Number:\"))\n",
+        "if num % 2== 0:\n",
+        "  print(f\"{num}is Even number\")\n",
+        "else:\n",
+        "  print(f\"{num}is odd number\")"
+      ],
+      "metadata": {
+        "id": "KXRfCvf6sKv2",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "db559739-ffb3-4ef1-a1f8-dd55d104b79f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a Number:5\n",
+            "5is odd number\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "YKya3kEasTbu"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. Write a Python program that calculates the sum of digits of a positive integer. Prompt the user to input a number, then display the sum of its digits.\n"
+      ],
+      "metadata": {
+        "id": "8gkLi0e6tIwo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input(\"Enter a number:\"))\n",
+        "sum=0\n",
+        "while num>0:\n",
+        "  rem=num%10\n",
+        "  sum=sum+rem\n",
+        "  num=num//10\n",
+        "print(sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "M57vjpnQtZcy",
+        "outputId": "36979db4-b5db-40e9-9fb3-5dda228cf2f4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number:12345\n",
+            "15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. Create a Python program that generates the Fibonacci series up to a specified number of terms. The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones, starting from 0 and 1.\n"
+      ],
+      "metadata": {
+        "id": "5fY2-O54t43e"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num=int(input(\"Enter a number:\"))\n",
+        "fn=0\n",
+        "sn=1\n",
+        "res=0\n",
+        "if num<=1:\n",
+        "  print(\"0\\n1\")\n",
+        "else:\n",
+        "  print(\"0\\n1\")\n",
+        "  for i in range(2,num):\n",
+        "    res=fn+sn\n",
+        "    print(res)\n",
+        "    fn=sn\n",
+        "    sn=res"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "l1J3UD1zt9wi",
+        "outputId": "ff247582-bd66-4ca5-8217-3171f8522da6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number:10\n",
+            "0\n",
+            "1\n",
+            "1\n",
+            "2\n",
+            "3\n",
+            "5\n",
+            "8\n",
+            "13\n",
+            "21\n",
+            "34\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. Write a Python program to calculate the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n."
+      ],
+      "metadata": {
+        "id": "kVN9nyH8ulvp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n=int(input())\n",
+        "p=1\n",
+        "for i in range(1,n+1):\n",
+        "    p*=i\n",
+        "print(p)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "XD0UYv8RupuW",
+        "outputId": "947233fd-e490-4865-f036-e562e9bad4da"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "6\n",
+            "720\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5. Develop a Python program that calculates the area of various shapes such as square, rectangle, circle, and triangle. Prompt the user to select a shape and then input the required dimensions. Display the calculated area.\n"
+      ],
+      "metadata": {
+        "id": "Ek24dCnsv3oS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "shape=input(\"Enter the shape:\")\n",
+        "pi=3.14\n",
+        "if shape==\"square\":\n",
+        "  a=int(input(\"Enter the side:\"))\n",
+        "  area=a*a\n",
+        "  print(area)\n",
+        "elif shape==\"rectangle\":\n",
+        "  l=int(input(\"Enter the length:\"))\n",
+        "  b=int(input(\"Enter the breadth:\"))\n",
+        "  area=l*b\n",
+        "  print(area)\n",
+        "elif shape==\"circle\":\n",
+        "  r=int(input(\"Enter the radius:\"))\n",
+        "  area=pi*r*r\n",
+        "  print(area)\n",
+        "elif shape==\"triangle\":\n",
+        "  b=int(input(\"Enter the base:\"))\n",
+        "  h=int(input(\"Enter the height:\"))\n",
+        "  area=0.5*b*h\n",
+        "  print(area)\n",
+        "else:\n",
+        "  print(\"Enter valid shape\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bjGt-plDv_xc",
+        "outputId": "9160dc0b-e202-42db-87f3-788a94e2ff85"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the shape:circle\n",
+            "Enter the radius:4\n",
+            "50.24\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6. Create a Python program that checks whether a given string is a palindrome or not. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward."
+      ],
+      "metadata": {
+        "id": "qwazFqZizibe"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "string=input(\"Enter a string: \")\n",
+        "reverse=string[::-1]\n",
+        "if string==reverse:\n",
+        "  print(\"Given string is palindrome\")\n",
+        "else:\n",
+        "  print(\"Given string is not palindrome\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9n1F925bzq6c",
+        "outputId": "382150d4-f63a-4b87-89ae-98e6a280dcc6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a string: madam\n",
+            "Given string is palindrome\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
