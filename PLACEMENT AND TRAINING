@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyNnvm7uAsVbX2VnAd4UsbZ2",
+      "authorship_tag": "ABX9TyOUkuHpq9EgU9yClJrJjn/X",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -25,6 +25,15 @@
       "source": [
         "<a href=\"https://colab.research.google.com/github/Nissanth25/Nissanth25/blob/main/PLACEMENT%20AND%20TRAINING\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
       ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "fpFTT303e2Hy"
+      },
+      "outputs": [],
+      "source": []
     },
     {
       "cell_type": "markdown",
@@ -76,6 +85,15 @@
           ]
         }
       ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "JxTuxNh8t7vj"
+      },
+      "execution_count": null,
+      "outputs": []
     },
     {
       "cell_type": "markdown",
