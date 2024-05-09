@@ -1,0 +1,525 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOUkuHpq9EgU9yClJrJjn/X",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Nissanth25/Nissanth25/blob/main/Placement%20and%20training%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "fpFTT303e2Hy"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Create a list of first 10 natural numbers. And write a program to find the lists of odd numbers and even numbers separately. And, to find the square of its odd and even lists."
+      ],
+      "metadata": {
+        "id": "gr_ikebve4Qu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "odd_numbers = []\n",
+        "even_numbers = []\n",
+        "\n",
+        "for num in numbers:\n",
+        "    if num % 2 != 0:\n",
+        "        odd_numbers.append(num)\n",
+        "    else:\n",
+        "        even_numbers.append(num)\n",
+        "\n",
+        "odd_squares = [num ** 2 for num in odd_numbers]\n",
+        "even_squares = [num ** 2 for num in even_numbers]\n",
+        "\n",
+        "print(\"Odd Numbers:\", odd_numbers)\n",
+        "print(\"Even Numbers:\", even_numbers)\n",
+        "print(\"Squares of Odd Numbers:\", odd_squares)\n",
+        "print(\"Squares of Even Numbers:\", even_squares)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iHFa9vbTg-bZ",
+        "outputId": "b290c29f-2f31-4730-8df5-5bcf99489282"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Odd Numbers: [1, 3, 5, 7, 9]\n",
+            "Even Numbers: [2, 4, 6, 8, 10]\n",
+            "Squares of Odd Numbers: [1, 9, 25, 49, 81]\n",
+            "Squares of Even Numbers: [4, 16, 36, 64, 100]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "JxTuxNh8t7vj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Write a program to find the second largest and second smallest number in the list without using the in-built function."
+      ],
+      "metadata": {
+        "id": "VsiXVy7KhtxR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def find_second_largest_smallest(numbers):\n",
+        "    largest = second_largest = float(0)\n",
+        "    smallest = second_smallest = float(0)\n",
+        "    for i in numbers:\n",
+        "        if i > largest:\n",
+        "            second_largest = largest\n",
+        "            largest = i\n",
+        "        elif i > second_largest and i != largest:\n",
+        "            second_largest = i\n",
+        "        if i < smallest:\n",
+        "            second_smallest = smallest\n",
+        "            smallest = i\n",
+        "        elif i < second_smallest and i != smallest:\n",
+        "            second_smallest = i\n",
+        "    return second_largest, second_smallest\n",
+        "numbers = [10, 5, 20, 3, 15]\n",
+        "second_largest, second_smallest = find_second_largest_smallest(numbers)\n",
+        "print(\"Second largest number:\", second_largest)\n",
+        "print(\"Second smallest number:\", second_smallest)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ykHjtEF0hy4U",
+        "outputId": "c8afc018-7cad-4ced-b963-57367473efca"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Second largest number: 15\n",
+            "Second smallest number: 0.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Write a program to sort elements stored in the list as Ascending order and Descending order without using the in-built function (sort ()).                \n",
+        "Eg: [5,3,7,9,8,4,2]\n"
+      ],
+      "metadata": {
+        "id": "Hhn80hh4k48n"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def ascending_sort(l):\n",
+        "    for i in range(len(l)):\n",
+        "        for j in range(i + 1, len(l)):\n",
+        "            if l[i] > l[j]:\n",
+        "                l[i], l[j] = l[j], l[i]\n",
+        "    return l\n",
+        "def descending_sort(l):\n",
+        "    for i in range(len(l)):\n",
+        "        for j in range(i + 1, len(l)):\n",
+        "            if l[i] < l[j]:\n",
+        "               l[i], l[j] = l[j], l[i]\n",
+        "    return l\n",
+        "l = [5, 3, 7, 9, 8, 4, 2]\n",
+        "ascending_sorted_list = ascending_sort(l.copy())\n",
+        "print(\"Ascending Order:\", ascending_sorted_list)\n",
+        "descending_sorted_list = descending_sort(l.copy())\n",
+        "print(\"Descending Order:\", descending_sorted_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "U19aUQnblIw4",
+        "outputId": "943de275-7b1e-4e75-bdba-333a4ee54318"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ascending Order: [2, 3, 4, 5, 7, 8, 9]\n",
+            "Descending Order: [9, 8, 7, 5, 4, 3, 2]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Find the index position of the specific number stored in the list.\n",
+        "Eg: a= [45,67,83,24,55,87,77,34]\n",
+        "What is the position of 55?\n"
+      ],
+      "metadata": {
+        "id": "AcqQ3W5kl5uV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n=[45,67,83,24,55,87,77,34]\n",
+        "g=int(input(\"enter a number: \"))\n",
+        "c=0\n",
+        "for i in n:\n",
+        "  c+=1\n",
+        "  if i==g:\n",
+        "    break\n",
+        "print(f\"the posttion of (n) : {c-1}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Wv0z9gCno2H3",
+        "outputId": "d39f0eda-683d-4734-9e64-2fb8cc9be8a0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter a number: 55\n",
+            "the posttion of (n) : 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Find most frequent element present in a list.\n",
+        "Eg: a= [4,5,6,4,6,7,4,2,4,8,4]\n",
+        "Output: 4\n"
+      ],
+      "metadata": {
+        "id": "MypeAuK0pqFl"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def most_frequent(list1):\n",
+        "    count_dict = dict()\n",
+        "    for ele in list1:\n",
+        "        if ele not in count_dict:\n",
+        "            count_dict[ele] = 1\n",
+        "        else:\n",
+        "            count_dict[ele] += 1\n",
+        "    max_count = 0\n",
+        "    most_frequent_ele = None\n",
+        "    for ele, count in count_dict.items():\n",
+        "        if count > max_count:\n",
+        "            max_count = count\n",
+        "            most_frequent_ele = ele\n",
+        "    return most_frequent_ele\n",
+        "list1 = [4, 5, 6, 4, 6, 7, 4, 2, 4, 8, 4]\n",
+        "print(most_frequent(list1))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V2dQDgBtsN0K",
+        "outputId": "5a59409c-cc4b-43a6-b160-365d3754263d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Below are the two lists. Write a Python program to convert them into a dictionary in a way that item from list1 is the key and item from list2 is the value by using update method ().\n",
+        "keys = ['Ten', 'Twenty', 'Thirty']\n",
+        "values = [10, 20, 30]\n"
+      ],
+      "metadata": {
+        "id": "LYLyMdz9sOHz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "keys = ['Ten', 'Twenty', 'Thirty']\n",
+        "values = [10, 20, 30]\n",
+        "result_dict = {}\n",
+        "for key, value in zip(keys, values):\n",
+        "    result_dict.update({key: value})\n",
+        "\n",
+        "print(\"Resulting Dictionary:\", result_dict)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "S0hIrIDLscBy",
+        "outputId": "a6e24b70-b31c-48f3-e266-e5d46572c29d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Resulting Dictionary: {'Ten': 10, 'Twenty': 20, 'Thirty': 30}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Create a list of 10 members as a Voter_list. Assume that there are 3 Candidates (A, B & C) are going to contest in the election process. Write a program that voters will cast their votes and predict the Winner and Runner of the election process and to find the members who voted for the Winner and Runner"
+      ],
+      "metadata": {
+        "id": "-ezkypKgstT6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"candidates: virat kholi dhoni\")\n",
+        "print(\"1 for virat as well as enter 2 and 3 for kholi and dhoni then 4 for nota\")\n",
+        "voters=[\"luffy\",\"zoro\",\"nami\",\"sanji\",\"usopp\",\"chopper\",\"robin\",\"franky\",\"brook\",\"zimbei\"]\n",
+        "\n",
+        "v=0\n",
+        "k=0\n",
+        "d=0\n",
+        "n=0\n",
+        "for i in voters:\n",
+        "    vote=int(input(f\"voters-{i}: \"))\n",
+        "    if vote==1:\n",
+        "        v+=1\n",
+        "    elif vote==2:\n",
+        "        k+=1\n",
+        "    elif vote==3:\n",
+        "        d+=1\n",
+        "    else:\n",
+        "        n+=1\n",
+        "\n",
+        "print(f\"virat count={v}\",f\"kholi count: {k}\",f\"dhoni count: {d}\",f\"nota count: {n}\",sep=\"\\n\")\n",
+        "\n",
+        "if(v > k or d or n):\n",
+        "    print(\"Winner virat\")\n",
+        "elif(k > v or d or n):\n",
+        "    print(\"winner kholi\")\n",
+        "elif(d > n or k or v):\n",
+        "    print(\"winner dhoni\")\n",
+        "elif(n > v or k or d):\n",
+        "    print(\"nota\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "slevN-mrtrag",
+        "outputId": "bd2b52f7-1333-49ef-f847-7cce33134941"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "candidates: virat kholi dhoni\n",
+            "1 for virat as well as enter 2 and 3 for kholi and dhoni then 4 for nota\n",
+            "voters-luffy: 1\n",
+            "voters-zoro: 1\n",
+            "voters-nami: 1\n",
+            "voters-sanji: 1\n",
+            "voters-usopp: 2\n",
+            "voters-chopper: 3\n",
+            "voters-robin: 2\n",
+            "voters-franky: 4\n",
+            "voters-brook: 1\n",
+            "voters-zimbei: 2\n",
+            "virat count=5\n",
+            "kholi count: 3\n",
+            "dhoni count: 1\n",
+            "nota count: 1\n",
+            "Winner virat\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Write a program to calculate the following functions:\n",
+        "\t1. India (Rupee) to US (Dollar) conversion\n",
+        "\t2. Celsius to Fahrenheit\n",
+        "\t3. BMI Calculation\n",
+        "\t4. Simple Interest Calculation\n"
+      ],
+      "metadata": {
+        "id": "I9ZwKZMZt4Pm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def inr_to_usd(amount_inr):\n",
+        "    # Conversion rate from INR to USD\n",
+        "    conversion_rate = 0.014\n",
+        "    amount_usd = amount_inr * conversion_rate\n",
+        "    return amount_usd\n",
+        "\n",
+        "def celsius_to_fahrenheit(celsius):\n",
+        "    fahrenheit = (celsius * 9/5) + 32\n",
+        "    return fahrenheit\n",
+        "\n",
+        "def calculate_bmi(weight_kg, height_m):\n",
+        "    bmi = weight_kg / (height_m ** 2)\n",
+        "    return bmi\n",
+        "\n",
+        "def calculate_simple_interest(principal, rate, time):\n",
+        "    simple_interest = (principal * rate * time) / 100\n",
+        "    return simple_interest\n",
+        "\n",
+        "amount_inr = 1000\n",
+        "amount_usd = inr_to_usd(amount_inr)\n",
+        "print(f\"{amount_inr} INR is equal to {amount_usd:.2f} USD\")\n",
+        "\n",
+        "celsius = 30\n",
+        "fahrenheit = celsius_to_fahrenheit(celsius)\n",
+        "print(f\"{celsius} Celsius is equal to {fahrenheit:.2f} Fahrenheit\")\n",
+        "\n",
+        "weight_kg = 70\n",
+        "height_m = 1.75\n",
+        "bmi = calculate_bmi(weight_kg, height_m)\n",
+        "print(f\"The BMI is: {bmi:.2f}\")\n",
+        "\n",
+        "principal = 1000\n",
+        "rate = 5\n",
+        "time = 2\n",
+        "simple_interest = calculate_simple_interest(principal, rate, time)\n",
+        "print(f\"The simple interest is: {simple_interest:.2f}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "I0Eik4xxt8PA",
+        "outputId": "5f126c8e-9def-4e47-dc9d-52964912ae3b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1000 INR is equal to 14.00 USD\n",
+            "30 Celsius is equal to 86.00 Fahrenheit\n",
+            "The BMI is: 22.86\n",
+            "The simple interest is: 100.00\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Write a program to get 0s and 1s in the list:"
+      ],
+      "metadata": {
+        "id": "4pmcnUyczlTf"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "def get_zeros_ones(length):\n",
+        "  zeros_ones = []\n",
+        "  for _ in range(length):\n",
+        "    random_bool = random.random() < 0.5\n",
+        "    zeros_ones.append(int(random_bool))\n",
+        "\n",
+        "  return zeros_ones\n",
+        "list_length = 10\n",
+        "zeros_ones_list = get_zeros_ones(list_length)\n",
+        "print(zeros_ones_list)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-fQEPIGPzor9",
+        "outputId": "8285c29d-d193-4592-d4bd-3fbf9f34810b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 1, 0, 0, 0, 1, 0, 0, 1, 1]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
