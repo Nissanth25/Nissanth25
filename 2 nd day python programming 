@@ -1,0 +1,257 @@
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+odd_numbers = []
+even_numbers = []
+
+for num in numbers:
+    if num % 2 != 0:
+        odd_numbers.append(num)
+    else:
+        even_numbers.append(num)
+
+odd_squares = [num ** 2 for num in odd_numbers]
+even_squares = [num ** 2 for num in even_numbers]
+
+print("Odd Numbers:", odd_numbers)
+print("Even Numbers:", even_numbers)
+print("Squares of Odd Numbers:", odd_squares)
+print("Squares of Even Numbers:", even_squares)
+
+output:
+Odd Numbers: [1, 3, 5, 7, 9]
+Even Numbers: [2, 4, 6, 8, 10]
+Squares of Odd Numbers: [1, 9, 25, 49, 81]
+Squares of Even Numbers: [4, 16, 36, 64, 100]
+
+**********************************************************
+def find_largest_smallest(list1):
+  largest = list1[0]
+  smallest = list1[0]
+  for i in range(1, len(list1)):
+    if list1[i] > largest:
+      largest = list1[i]
+    elif list1[i] < smallest:
+      smallest = list1[i]
+  return largest, smallest
+
+# Driver code
+list1 = [10, 20, 4, 5, 6, 7, 8, 9]
+print("Largest element is:", find_largest_smallest(list1)[0])
+print("Smallest element is:", find_largest_smallest(list1)[1])
+
+output:
+Largest element is: 20
+Smallest element is: 4
+
+**********************************************************
+
+def find_second_largest_smallest(numbers):
+    largest = second_largest = float(0)
+    smallest = second_smallest = float(0)
+    for i in numbers:
+        if i > largest:
+            second_largest = largest
+            largest = i
+        elif i > second_largest and i != largest:
+            second_largest = i
+        if i < smallest:
+            second_smallest = smallest
+            smallest = i
+        elif i < second_smallest and i != smallest:
+            second_smallest = i
+    return second_largest, second_smallest
+numbers = [10, 5, 20, 3, 15]
+second_largest, second_smallest = find_second_largest_smallest(numbers)
+print("Second largest number:", second_largest)
+print("Second smallest number:", second_smallest)
+
+output:
+
+Second largest number: 15
+Second smallest number: 5
+
+**********************************************************def ascending_sort(l):
+    for i in range(len(l)):
+        for j in range(i + 1, len(l)):
+            if l[i] > l[j]:
+                l[i], l[j] = l[j], l[i]
+    return l
+def descending_sort(l):
+    for i in range(len(l)):
+        for j in range(i + 1, len(l)):
+            if l[i] < l[j]:
+               l[i], l[j] = l[j], l[i]
+    return l
+l = [5, 3, 7, 9, 8, 4, 2]
+ascending_sorted_list = ascending_sort(l.copy())
+print("Ascending Order:", ascending_sorted_list)
+descending_sorted_list = descending_sort(l.copy())
+print("Descending Order:", descending_sorted_list)
+
+output:
+Ascending Order: [2, 3, 4, 5, 7, 8, 9]
+Descending Order: [9, 8, 7, 5, 4, 3, 2]
+
+**********************************************************
+
+n=[45,67,83,24,55,87,77,34]
+g=int(input("enter a number: "))
+c=0
+for i in n:
+  c+=1
+  if i==g:
+    break
+print(f"the posttion of (n) : {c-1}")
+
+output:
+enter a number: 55
+the posttion of (n) : 4
+
+**********************************************************
+
+def most_frequent(list1):
+    count_dict = dict()
+    for ele in list1:
+        if ele not in count_dict:
+            count_dict[ele] = 1
+        else:
+            count_dict[ele] += 1
+    max_count = 0
+    most_frequent_ele = None
+    for ele, count in count_dict.items():
+        if count > max_count:
+            max_count = count
+            most_frequent_ele = ele
+    return most_frequent_ele
+list1 = [4, 5, 6, 4, 6, 7, 4, 2, 4, 8, 4]
+print(most_frequent(list1))
+
+output: 4
+
+**********************************************************
+
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+result_dict = {}
+for key, value in zip(keys, values):
+    result_dict.update({key: value})
+
+print("Resulting Dictionary:", result_dict)
+
+output:
+Resulting Dictionary: {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+
+**********************************************************
+
+print("candidates: virat kholi dhoni")
+print("1 for virat as well as enter 2 and 3 for kholi and dhoni then 4 for nota")
+voters=["luffy","zoro","nami","sanji","usopp","chopper","robin","franky","brook","zimbei"]
+
+v=0
+k=0
+d=0
+n=0
+for i in voters:
+    votes1
+    =int(input(f"voters-{i}: "))
+    if vote==1:
+        v+=1
+    elif vote==2:
+        k+=1
+    elif vote==3:
+        d+=1
+    else:
+        n+=1
+
+print(f"virat count={v}",f"kholi count: {k}",f"dhoni count: {d}",f"nota count: {n}",sep="\n")
+
+if(v > k or d or n):
+    print("Winner virat")
+elif(k > v or d or n):
+    print("winner kholi")
+elif(d > n or k or v):
+    print("winner dhoni")
+elif(n > v or k or d):
+    print("nota")
+
+output:
+candidates: virat kholi dhoni
+1 for virat as well as enter 2 and 3 for kholi and dhoni then 4 for nota
+voters-luffy: 3
+voters-zoro: 3
+voters-nami: 3
+voters-sanji: 3
+voters-usopp: 4
+voters-chopper: 2
+voters-robin: 2
+voters-franky: 2
+voters-brook: 3
+voters-zimbei: 3
+virat count=0
+kholi count: 3
+dhoni count: 6
+nota count: 1
+Winner dhoni
+
+**********************************************************
+
+def inr_to_usd(amount_inr):
+    conversion_rate = 0.014
+    amount_usd = amount_inr * conversion_rate
+    return amount_usd
+
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+
+def calculate_bmi(weight_kg, height_m):
+    bmi = weight_kg / (height_m ** 2)
+    return bmi
+
+def calculate_simple_interest(principal, rate, time):
+    simple_interest = (principal * rate * time) / 100
+    return simple_interest
+
+amount_inr = 1000
+amount_usd = inr_to_usd(amount_inr)
+print(f"{amount_inr} INR is equal to {amount_usd:.2f} USD")
+
+celsius = 30
+fahrenheit = celsius_to_fahrenheit(celsius)
+print(f"{celsius} Celsius is equal to {fahrenheit:.2f} Fahrenheit")
+
+weight_kg = 70
+height_m = 1.75
+bmi = calculate_bmi(weight_kg, height_m)
+print(f"The BMI is: {bmi:.2f}")
+
+principal = 1000
+rate = 5
+time = 2
+simple_interest = calculate_simple_interest(principal, rate, time)
+print(f"The simple interest is: {simple_interest:.2f}")
+
+output:
+1000 INR is equal to 14.00 USD
+30 Celsius is equal to 86.00 Fahrenheit
+The BMI is: 22.86
+The simple interest is: 100.00
+
+**********************************************************
+
+import random
+
+def get_zeros_ones(length):
+  zeros_ones = []
+  for _ in range(length):
+    random_bool = random.random() < 0.5
+    zeros_ones.append(int(random_bool))
+
+  return zeros_ones
+list_length = 10
+zeros_ones_list = get_zeros_ones(list_length)
+print(zeros_ones_list)
+
+output:
+ [1, 1, 0, 0, 0, 1, 0, 0, 1, 1]
+
+**********************************************************
