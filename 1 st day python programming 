@@ -1,0 +1,226 @@
+i=str(input())
+l=len(i)
+print(i[0]+i[l//2]+i[-1])
+
+input: PRADEEP
+output: PDP
+
+**********************************************************
+
+i=str(input())
+l=len(i)
+g=l//2
+print(i[g-1]+i[g]+i[g+1])
+
+input: PRADEEP 
+output: ADE
+
+**********************************************************
+
+str1=input()
+str2=input()
+n=str1[0:len(str1)//2]
+g=str1[len(str1)//2:]
+print(n+str2+g)
+
+input: SUPER
+       STAR
+output:SUSTARPER
+
+**********************************************************
+
+n=input()
+g=input()
+print(n[0]+g[0]+n[1]+g[1]+n[2]+g[2])
+
+input: LEO
+       DAS
+output:LDEAOS
+
+**********************************************************
+
+n=input()
+g=input()
+print(g[::-1],n[::-1])
+
+input:SUPER
+      STAR
+output:RATS REPUS
+
+**********************************************************
+
+n=input()
+g=input()
+print(n[0]+g[2]+n[1]+g[1]+n[2]+g[0])
+
+input: LEO
+       DAS
+output:LSEAOD
+
+**********************************************************
+
+a=0
+st="uhjh3u4kg@#67p"
+c=0
+d=0
+for i in st:
+    if i.isalpha()==0:
+        a+=1
+    if i.isdigit()==0:
+        c+=1
+    if i.isalnum()==0:
+        d+=1
+print("Total num of char digits and symbol ")
+print("Char",a)
+print("Digits",c)
+print("Symbol",d)
+
+output:
+Total num of char digits and symbol 
+Char 6
+Digits 10
+Symbol 2
+
+**********************************************************
+
+def calculate_bonus(experience):
+  if experience > 8:
+    bonus = 0.10
+  elif experience > 4:
+    bonus = 0.07
+  elif experience > 2:
+    bonus = 0.04
+  else:
+    bonus = 0
+
+  return bonus
+
+experience = 9
+bonus = calculate_bonus(experience)
+print("Bonus percentage:", bonus)
+
+output: Bonus percentage: 0.1
+
+**********************************************************
+
+n=int(input())
+if(n<=100):
+    print("no charge")
+elif(n<200 and n>100):
+    i=n-100
+    print(i*5)
+else:
+    g=((n-200)*10+500)
+    print(g)
+
+input: 350
+output: 2000
+
+**********************************************************
+
+p=int(input())
+if p<=7000:
+    q=p-p*(10/100)
+    print("To pay:",q)
+elif p>7000 and p<=10000:
+    q=p-p*(15/100)
+    print("To pay:",q)
+else:
+    q=p-p*(20/100)
+    print("To pay:",q)
+
+input: 10000
+output: To pay: 8500.0
+
+**********************************************************
+
+start = int(input())
+end = int(input())
+for num in range(start, end + 1):
+    if num > 1:
+        for i in range(2, int(num ** 0.5) + 1):
+            if (num % i) == 0:
+                break
+        else:
+            print(num)
+
+input:2
+      40
+output:2
+       3
+       5
+       7
+       11
+       13
+       17
+       19
+       23
+       29
+       31
+       37
+
+**********************************************************
+
+num = int(input())
+if num == 1:
+    print(num, "is not a prime number")
+elif num > 1:
+
+   for i in range(2,num):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           break
+   else:
+       print(num,"is a prime number")
+
+input: 7
+output:7 is a prime number
+
+**********************************************************
+
+n=input()
+print(n[::-1])
+
+input:3256
+output:6523
+
+**********************************************************
+
+rows=5
+for i in range(1, rows + 1):
+    for j in range(1, rows - i + 1):
+        print(" ", end="")
+    for k in range(1, i + 1):
+        print("*", end=" ")
+    print()
+
+output:  
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * *
+
+**********************************************************
+
+a, b = 0, 1
+print(a)
+print(b)
+
+
+for _ in range(8):
+    a, b = b, a + b
+    print(b)
+
+output: 0
+        1
+        1
+        2
+        3
+        5
+        8
+        13
+        21
+        34
+
+**********************************************************
