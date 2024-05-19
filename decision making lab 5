@@ -1,0 +1,288 @@
+
+num=int(input("Enter a number: "))
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+input: 5
+
+output: Positive 
+
+**********************************************************
+
+2. Check eligibility to vote:
+
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("You are eligible to vote.")
+else:
+    print("You are not eligible to vote.")
+
+input: 18
+
+output:You are eligible to vote
+
+**********************************************************
+
+3. Check leap year:
+
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year")
+else:
+    print("Not a leap year")
+
+input: 2024
+
+output:Leap year
+
+****************************************************
+
+4. Check for fever:
+
+temperature = float(input("Enter your temperature in Celsius: "))
+if temperature >= 38:
+    print("You have a fever.")
+else:
+    print("You do not have a fever.")
+
+input:
+
+output:
+
+**********************************************************
+
+num1=int(input("Enter first number: "))
+num2=int(input("Enter second number: "))
+num3=int(input("Enter third number: "))
+print("Largest number:", max(num1, num2, num3))
+
+input:
+
+output:
+
+**********************************************************
+
+meal_cost = int(input("Enter cost of the meal: "))
+tax_rate = float(input("Enter tax rate (%): "))
+tip_rate = float(input("Enter tip rate (%): "))
+total_cost = meal_cost * (1 + tax_rate/100) + meal_cost * (tip_rate/100)
+print("Total cost:", total_cost)
+
+input:
+
+output:
+
+**********************************************************
+
+a = float(input("Enter length of side a: "))
+b = float(input("Enter length of side b: "))
+c = float(input("Enter length of side c: "))
+
+if a != b and b != c and a != c:
+    print("Scalene triangle")
+elif a == b == c:
+    print("Equilateral triangle")
+else:
+    print("Isosceles triangle")
+
+input:
+
+output:
+
+**********************************************************
+
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year with 366 days")
+else:
+    print("Common year with 365 days")
+
+input:
+
+output:
+
+**********************************************************
+
+char = input("Enter a character: ")
+if char.lower() in 'aeiou':
+    print("Vowel")
+else:
+    print("Consonant")
+
+input: a
+
+output: vowel 
+
+**********************************************************
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+num3 = int(input("Enter third number: "))
+sorted_numbers = sorted([num1, num2, num3])
+print("Numbers in ascending order:", sorted_numbers)
+
+input:
+
+output:
+
+**********************************************************
+
+score = int(input("Enter your score: "))
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+elif score >= 60:
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+input:
+
+output:
+
+****************************************************
+balance = float(input("Enter your account balance: "))
+withdrawal = int(input("Enter withdrawal amount: "))
+
+if withdrawal <= balance:
+    balance -= withdrawal
+    print("Transaction successful.")
+else:
+    print("Insufficient funds.")
+
+input:
+
+output:
+
+**********************************************************
+
+import math
+
+a = int(input("Enter coefficient a: "))
+b = int(input("Enter coefficient b: "))
+c = int(input("Enter coefficient c: "))
+
+discriminant = b**2 - 4*a*c
+if discriminant > 0:
+    root1 = (-b + math.sqrt(discriminant)) / (2*a)
+    root2 = (-b - math.sqrt(discriminant)) / (2*a)
+    print("Roots:", root1, root2)
+elif discriminant == 0:
+    root = -b / (2*a)
+    print("Roots:", root)
+else:
+    print("No real roots")
+
+input:
+
+output:
+
+**********************************************************
+
+age = int(input("Enter your age: "))
+gender = input("Enter your gender (Male/Female): ")
+
+if gender.lower() == "male":
+    lower_limit = 0.5 * (220 - age)
+    upper_limit = 0.85 * (220 - age)
+elif gender.lower() == "female":
+    lower_limit = 0.5 * (226 - age)
+    upper_limit = 0.85 * (226 - age)
+else:
+    print("Invalid gender")
+    exit()
+
+print("Recommended heart rate range:", int(lower_limit), "-", int(upper_limit), "bpm")
+
+input:
+
+output:
+
+**********************************************************
+
+month = input("Enter month: ")
+year = int(input("Enter year: "))
+
+if month.lower() in ['january', 'march', 'may', 'july', 'august', 'october', 'december']:
+    print("31 days")
+elif month.lower() in ['april', 'june', 'september', 'november']:
+    print("30 days")
+elif month.lower() == 'february':
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        print("29 days")
+    else:
+        print("28 days")
+else:
+    print("Invalid month")
+
+input:
+
+output:
+
+**********************************************************
+cart = []
+total_amount = 0
+
+menu = {
+    "Pizza": 10,
+    "Burger": 5,
+    "Fries": 3,
+    "Drink": 2
+}
+
+while True:
+    print("Menu:")
+    for item, price in menu.items():
+        print(f"{item}: ${price}")
+
+    choice = input("Enter item to add to cart (or 'done' to finish): ")
+    if choice.lower() == 'done':
+        break
+    elif choice in menu:
+        cart.append(choice)
+        total_amount += menu[choice]
+        print(f"{choice} added to cart.")
+    else:
+        print("Invalid item.")
+
+if total_amount > 100:
+    discount = total_amount * 0.15
+    total_amount -= discount
+    print("Congratulations! You got a 15% discount.")
+elif total_amount > 50:
+    discount = total_amount * 0.10
+    total_amount -= discount
+    print("Congratulations! You got a 10% discount.")
+
+delivery_address = input("Enter delivery address: ")
+delivery_radius = ["Downtown", "Midtown", "Uptown"]
+
+if delivery_address in delivery_radius:
+    print("Delivery address validated. Delivery is available.")
+else:
+    print("Sorry, delivery is not available to this address. You can opt for pickup.")
+
+current_order_volume = len(cart)
+if current_order_volume > 5:
+    print("Due to high order volume, delivery may take longer than usual.")
+else:
+    print("Delivery will be on time.")
+
+print("Order Summary:")
+for item in cart:
+    print(item)
+print("Total amount: $", total_amount)
+
+input:
+
+output:
+
+**********************************************************
