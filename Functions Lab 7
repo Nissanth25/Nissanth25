@@ -1,0 +1,122 @@
+
+Low Level
+
+def show_employee(name, salary=9000):
+    print(f"Employee: {name}, Salary: {salary}")
+
+name=input("Enter employee's name: ")
+salary=input("Enter employee's salary (or leave blank for default): ")
+if salary:
+    show_employee(name, int(salary))
+else:
+    show_employee(name)
+
+**********************************************************
+
+def func1(*args):
+    for arg in args:
+        print(arg)
+
+args=input("Enter multiple values separated by space: ").split()
+func1(*args)
+
+**********************************************************
+
+def print_person(name, age):
+    print(f"Name: {name}, Age: {age}")
+
+name=input("Enter your name: ")
+age=int(input("Enter your age: "))
+print_person(name, age)
+
+**********************************************************
+
+def unique_list(lst):
+    return list(set(lst))
+
+lst=input("Enter a list of numbers separated by space: ").split()
+lst=[int(x) for x in lst]
+print("Unique List:", unique_list(lst))
+
+**********************************************************
+
+Medium Level:
+
+def power(base, exp=2):
+    return base ** exp
+base=int(input("Enter the base: "))
+exp=input("Enter the exponent (leave blank for default of 2): ")
+if exp:
+    exp=int(exp)
+    print("Result:", power(base, exp))
+else:
+    print("Result:", power(base))
+
+**********************************************************
+
+def reverse_list(lst):
+    return lst[::-1]
+
+lst=input("Enter a list of elements separated by space: ").split()
+print("Reversed List:", reverse_list(lst))
+
+**********************************************************
+
+def compute(a, b):
+    return a + b, a - b, a * b, a / b
+
+a=int(input("Enter the first number: "))
+b=int(input("Enter the second number: "))
+sum_, diff, prod, quot = compute(a, b)
+print(f"Sum: {sum_}, Difference: {diff}, Product: {prod}, Quotient: {quot}")
+
+**********************************************************
+
+def student_info(name, **kwargs):
+    info=f"Student Name: {name}"
+    for key, value in kwargs.items():
+        info+=f", {key.capitalize()}: {value}"
+    print(info)
+
+name=input("Enter student's name: ")
+age=input("Enter student's age: ")
+grade=input("Enter student's grade: ")
+school=input("Enter student's school: ")
+student_info(name, age=age, grade=grade, school=school)
+
+**********************************************************
+
+High Level:
+
+def count_departments(department_dict):
+    count = 1  # Count the current department
+    for sub_dept in department_dict.values():
+        count+=count_departments(sub_dept)
+    return count
+
+import ast
+dept_structure=input("Enter the nested department dictionary (e.g., {'HR': {'Recruitment': {}, 'Training': {}}}): ")
+dept_structure=ast.literal_eval(dept_structure)
+print("Total Departments:", count_departments(dept_structure))
+
+**********************************************************
+
+def pascal_triangle(n):
+    triangle=[[1]]
+    for i in range(1, n):
+        row=[1]
+        for j in range(1, i):
+            row.append(triangle[i-1][j-1] + triangle[i-1][j])
+        row.append(1)
+        triangle.append(row)
+    return triangle
+
+def print_pascal_triangle(n):
+    triangle=pascal_triangle(n)
+    for row in triangle:
+        print(" ".join(map(str, row)))
+
+n=int(input("Enter the number of rows for Pascal's triangle: "))
+print_pascal_triangle(n)
+
+**********************************************************
