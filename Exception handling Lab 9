@@ -1,0 +1,76 @@
+Low level:
+
+try:
+    num1=float(input("Enter the numerator: "))
+    num2=float(input("Enter the denominator: "))
+    result=num1 / num2
+    print(f"The result is: {result}")
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+**********************************************************
+
+try:
+    user_input=input("Enter an integer: ")
+    user_input=int(user_input)
+    print(f"You entered the integer: {user_input}")
+except ValueError:
+    print("Error: Invalid input. Please enter a valid integer.")
+
+**********************************************************
+
+try:
+    num1=input("Enter the first number: ")
+    num2=input("Enter the second number: ")
+    num1=float(num1)
+    num2=float(num2)
+    print(f"The sum is: {num1 + num2}")
+except ValueError:
+    print("Error: Both inputs must be numerical.")
+
+**********************************************************
+
+Medium kevel:
+
+try:
+    file_name=input("Enter the file name to open: ")
+    with open(file_name, 'r') as file:
+        content=file.read()
+        print(content)
+except FileNotFoundError:
+    print("Error: File not found.")
+
+**********************************************************
+
+2. Handling IndexError
+
+try:
+    my_list=[1, 2, 3, 4, 5]
+    index=int(input("Enter the index to access: "))
+    print(f"The element at index {index} is {my_list[index]}")
+except IndexError:
+    print("Error: Index out of range.")
+except ValueError:
+    print("Error: Please enter a valid integer for the index.")
+
+**********************************************************
+
+High level:
+
+try:
+    num1=input("Enter the first number: ")
+    num2=input("Enter the second number: ")
+    num1=float(num1)
+    num2=float(num2)
+    index=int(input("Enter an index to access from a sample list [1, 2, 3, 4, 5]: "))
+    sample_list=[1, 2, 3, 4, 5]
+    print(f"The result of division is: {num1 / num2}")
+    print(f"The element at index {index} is {sample_list[index]}")
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+except ValueError:
+    print("Error: Please enter valid numerical inputs.")
+except IndexError:
+    print("Error: Index out of range.")
+
+**********************************************************
