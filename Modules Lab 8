@@ -1,0 +1,112 @@
+Low level:
+
+#temperature_conversion.py
+
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+**********************
+
+#use_temperature_conversion.py
+
+import temperature_conversion
+
+temp_c=float(input("Enter temperature in Celsius: "))
+temp_f=temperature_conversion.celsius_to_fahrenheit(temp_c)
+print(f"{temp_c} Celsius is {temp_f} Fahrenheit")
+
+temp_f=float(input("Enter temperature in Fahrenheit: "))
+temp_c=temperature_conversion.fahrenheit_to_celsius(temp_f)
+print(f"{temp_f} Fahrenheit is {temp_c} Celsius")
+
+**********************************************************
+
+Medium level
+
+#currency_conversion.py
+
+def usd_to_eur(usd, rate):
+    return usd * rate
+
+def eur_to_usd(eur, rate):
+    return eur / rate
+
+***************************
+#use_currency_conversion.py
+
+import currency_conversion
+
+usd=float(input("Enter amount in USD: "))
+rate=float(input("Enter conversion rate from USD to EUR: "))
+eur=currency_conversion.usd_to_eur(usd, rate)
+print(f"{usd} USD is {eur} EUR")
+
+eur=float(input("Enter amount in EUR: "))
+rate=float(input("Enter conversion rate from EUR to USD: "))
+usd=currency_conversion.eur_to_usd(eur, rate)
+print(f"{eur} EUR is {usd} USD")
+
+**********************************************************
+
+#arithmetic_operations.py
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
+
+******************************
+#use_arithmetic_operations.py
+
+import arithmetic_operations
+
+a=float(input("Enter first number: "))
+b=float(input("Enter second number: "))
+
+print(f"{a} + {b} = {arithmetic_operations.add(a, b)}")
+print(f"{a} - {b} = {arithmetic_operations.subtract(a, b)}")
+print(f"{a} * {b} = {arithmetic_operations.multiply(a, b)}")
+try:
+    print(f"{a} / {b} = {arithmetic_operations.divide(a, b)}")
+except ValueError as e:
+    print(e)
+
+**********************************************************
+
+High level:
+
+#conversion.py
+
+def decimal_to_binary(decimal):
+    return bin(decimal).replace("0b", "")
+
+def binary_to_decimal(binary):
+    return int(binary, 2)
+
+******************************
+
+#use_conversion.py
+
+import conversion
+
+decimal=int(input("Enter a decimal number: "))
+binary=conversion.decimal_to_binary(decimal)
+print(f"Decimal {decimal} is binary {binary}")
+
+binary=input("Enter a binary number: ")
+decimal=conversion.binary_to_decimal(binary)
+print(f"Binary {binary} is decimal {decimal}")
+
+**********************************************************
