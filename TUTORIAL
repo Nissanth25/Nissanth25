@@ -1,0 +1,90 @@
+
+import random
+count=25
+with open(‘random.txt’,’w’) as file:
+    for i in range(count):
+        res=file.write(f”{random.randint(1,100)}\n”)
+        print(res)
+
+**********************************************************
+
+with open(“random.txt”,’r’) as file:
+    numbers=[float(line.strip()) for line in file]
+    average=sum(numbers)/len(numbers)
+    print(f”average: {average}”)
+
+**********************************************************
+
+try:
+    with open(“allwin_geyrome.txt”,’r’) as file:
+        content=file.read()
+        print(content)
+except FileNotFoundError:
+    print(f”error: all gay the file does not found.”)
+
+**********************************************************
+
+def NegativeNumberError(number):
+    try:
+        for number in numbers:
+            if number>0:
+                print(“ok”)
+    except:
+        print(“error: negative number encountered”)
+number=[2,8,3,7]
+num=negativenumbererror(number)
+
+**********************************************************
+
+import numpy as np
+arr=np.random.randint(1,101,size=10)
+print(arr)
+
+**********************************************************
+
+import numpy as np
+array=np.array([1, 2, 3, 4, 5])
+print(“original array:”,array)
+array1=np.append(array,6)
+print(“array after adding an item:”,array1)
+array2=np.delete(array,np.where(array==3))
+print(“array after removing an item:”,array)
+
+**********************************************************
+
+import numpy as np
+arr=np.array([1,3,8,2,9])
+arey=np.sort(arr)
+print(“sorted array:”,arey)
+
+**********************************************************
+
+import numpy as np
+arr=np.array([1,2,3,4,5,6,7,8,9,10])
+mat=arr.reshape(2,5)
+print(“reshaped array (2x5):”)
+print(mat)
+
+**********************************************************
+
+import numpy as np
+arr=np.array([1,2,3,4,5,6,7,8,9,10])
+mat=arr.reshape(2,5)
+print(“reshaped array (2x5):”)
+print(mat)
+print(“element at row=1,col=2: “,mat[0,1])
+print(“first row:”,mat[0])
+print(“first two columns:”)
+print(mat[:,:2])
+
+**********************************************************
+
+with open(‘random.txt’,’a’) as file:
+    file.write(“101\n”)
+    file.write(“updated succesfully.\n”)
+with open(‘random.txt’,’r’) as file:
+    up=file.read()
+    print(“updated file content:”)
+    print(up)
+
+**********************************************************
